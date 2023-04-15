@@ -5,20 +5,20 @@
   ->Foi criado uma conta no AWS para obter-se Access key ID e Secret access key
   
   - Amazon CLI para execução em linha de comando
-  ->Foi instalado e configurado no windows o amazon CLI:
-    $ aws configure
-    AWS Access Key ID [None]: ---
-    AWS Secret Access Key [None]: ---
-    Default region name [None]: us-west-2
-    Default output format [None]: json
-    -> a configuração pode ser visualizada no arquivo .aws na pasta home.
+  ->Foi instalado e configurado no windows o amazon CLI:</br>
+    $ aws configure</br>
+    AWS Access Key ID [None]: ---</br>
+    AWS Secret Access Key [None]: ---</br>
+    Default region name [None]: us-west-2</br>
+    Default output format [None]: json</br>
+    -> a configuração pode ser visualizada no arquivo .aws na pasta home.</br>
 
 
 ### Comandos para execução do projeto:
-->Os comandos foram executados pelo Git Bash no diretório src para ter acesso as arquivos utilizados no projeto:
-    ->bathmucic.json
-    ->itemmusic.json
-    ->keyconditions.json
+->Os comandos foram executados pelo Git Bash no diretório src para ter acesso as arquivos utilizados no projeto:</br>
+    ->bathmucic.json</br>
+    ->itemmusic.json</br>
+    ->keyconditions.json</br>
 
 
 - Criar uma tabela
