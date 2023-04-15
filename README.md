@@ -23,6 +23,7 @@
 
 - Criar uma tabela
 
+```
 aws dynamodb create-table \
     --table-name Music \
     --attribute-definitions \
@@ -36,20 +37,20 @@ aws dynamodb create-table \
 ```
 
 - Inserir um item
-
+```
 aws dynamodb put-item \
     --table-name Music \
     --item file://itemmusic.json \
 ```
 
 - Inserir múltiplos itens
-
+```
 aws dynamodb batch-write-item \
     --request-items file://batchmusic.json
 ```
 
 - Criar um index global secundário baeado no título do álbum
-
+```
 aws dynamodb update-table \
     --table-name Music \
     --attribute-definitions AttributeName=AlbumTitle,AttributeType=S \
@@ -59,7 +60,7 @@ aws dynamodb update-table \
 ```
 
 - Criar um index global secundário baseado no nome do artista e no título do álbum
-
+```
 aws dynamodb update-table \
     --table-name Music \
     --attribute-definitions\
@@ -71,7 +72,7 @@ aws dynamodb update-table \
 ```
 
 - Criar um index global secundário baseado no título da música e no ano
-
+```
 aws dynamodb update-table \
     --table-name Music \
     --attribute-definitions\
@@ -83,14 +84,14 @@ aws dynamodb update-table \
 ```
 
 - Pesquisar item por artista
-
+```
 aws dynamodb query \
     --table-name Music \
     --key-condition-expression "Artist = :artist" \
     --expression-attribute-values  '{":artist":{"S":"Iron Maiden"}}'
 ```
 - Pesquisar item por artista e título da música
-
+```
 aws dynamodb query \
     --table-name Music \
     --key-condition-expression "Artist = :artist and SongTitle = :title" \
@@ -98,7 +99,7 @@ aws dynamodb query \
 ```
 
 - Pesquisa pelo index secundário baseado no título do álbum
-
+```
 aws dynamodb query \
     --table-name Music \
     --index-name AlbumTitle-index \
@@ -107,7 +108,7 @@ aws dynamodb query \
 ```
 
 - Pesquisa pelo index secundário baseado no nome do artista e no título do álbum
-
+```
 aws dynamodb query \
     --table-name Music \
     --index-name ArtistAlbumTitle-index \
@@ -116,7 +117,7 @@ aws dynamodb query \
 ```
 
 - Pesquisa pelo index secundário baseado no título da música e no ano
-
+```
 aws dynamodb query \
     --table-name Music \
     --index-name SongTitleYear-index \
